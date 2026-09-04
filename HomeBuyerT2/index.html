@@ -35,7 +35,7 @@
     <p class="intro">Tell us about you and the property you're buying, and we'll get your survey booked in.</p>
   </header>
 
-  <form id="surveyForm" novalidate action="https://formspree.io/f/mppzqrjj" method="POST">
+  <form id="surveyForm" novalidate action="https://formspree.io/f/mjyvoyoo" method="POST">
 
     <div class="form-body">
 
@@ -179,6 +179,16 @@
           <span class="error-msg">Please select a survey level.</span>
         </div>
 
+        <div class="field full" style="margin-top:18px;">
+          <label for="drone_required">Do you require any areas above 3m inspected with the use of a Drone?</label>
+          <select id="drone_required" name="Do_you_require_any_areas_above_3m_inspected_with_the_use_of_a_Drone?">
+            <option value="" disabled selected>Choose…</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
         <div class="banner banner-note" id="droneNote">
           <span class="banner-icon">ⓘ</span>
           <span>Noted — we'll confirm drone access and any additional cost before the inspection date.</span>
@@ -264,6 +274,13 @@
   const submitBtn = document.getElementById('submitBtn');
   const formStatus = document.getElementById('formStatus');
   const termsError = document.getElementById('termsError');
+
+  const droneSelect = document.getElementById('drone_required');
+  const droneNote = document.getElementById('droneNote');
+  droneSelect.addEventListener('change', function(){
+    if(droneSelect.value === 'Yes'){ droneNote.classList.add('is-visible'); }
+    else { droneNote.classList.remove('is-visible'); }
+  });
 
   // ---------- Cancellation Policy modal ----------
   const policyLink = document.getElementById('cancellationPolicyLink');
