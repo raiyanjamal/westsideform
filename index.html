@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westside Services — Forms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#212529;
+    --accent:#0671ba;
+    --accent-light:#eef6fc;
+    --muted:#6c757d;
+    --bg:#f5f6f8;
+    --surface:#ffffff;
+    --border:#dde1e6;
+    --radius:10px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .index-page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:64px 24px;
+  }
+
+  h1{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:600;
+    font-size:clamp(28px,5vw,36px);
+    letter-spacing:-0.01em;
+    margin:0 0 40px;
+  }
+
+  .link-boxes{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    max-width:760px;
+  }
+  .link-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:220px;
+    padding:28px 20px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    text-decoration:none;
+    color:var(--ink);
+    font-weight:600;
+    font-size:15px;
+    transition:border-color .15s, transform .15s, box-shadow .15s;
+  }
+  .link-box:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(6,113,186,0.12);
+    color:var(--accent);
+  }
+  .link-box:focus-visible{
+    outline:none;
+    box-shadow:0 0 0 3px var(--accent-light);
+  }
+
+  @media (max-width:640px){
+    .link-boxes{ flex-direction:column; align-items:center; }
+    .link-box{ width:100%; max-width:320px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="index-page">
+  <h1>Hi, Westley, please have a look</h1>
+
+  <div class="link-boxes">
+    <a class="link-box" href="./RICSValuation/index.html">Valuation Onboarding</a>
+    <a class="link-box" href="./HomeBuyer/index.html">HomeBuyer Survey</a>
+    <a class="link-box" href="./PartyWall/index.html">Party Wall Surveyor</a>
+  </div>
+</div>
+
+</body>
+</html>

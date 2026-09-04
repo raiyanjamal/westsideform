@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://westsideservices.co.uk/assets/img/favicon.png">
+<title>Valuation Onboarding — Westside Services Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="logo-wrap">
+    <div class="logo-mark">
+      <a href="https://westsideservices.co.uk">
+        <img src="https://westsideservices.co.uk/assets/img/brand-logo.png" alt="" width="180" height="auto">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="badges">
+    <span class="badge"><strong>CIOB</strong> Chartered Building Company</span>
+    <span class="badge"><span class="stars">★★★★★</span> Trustpilot</span>
+    <span class="badge"><strong>RICS</strong> Regulated</span>
+  </div>
+
+  <header class="form-header">
+    <h1>Instructing your RICS valuation</h1>
+    <p class="intro">We need a few details from you to prepare our terms of engagement. Please complete the form below.</p>
+  </header>
+
+  <form id="valuationForm" novalidate action="https://formspree.io/f/xljerjrj" method="POST">
+
+    <div class="form-body">
+
+      <!-- 1. Client and contact -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <div>
+            <h2>Client &amp; contact</h2>
+            <p class="section-sub">Who the report is for, and how to reach them.</p>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="full_name">Full name(s) of client(s)<span class="req">*</span></label>
+            <input type="text" id="full_name" name="full_name" maxlength="100" required placeholder="e.g. Jane and John Carter">
+            <span class="error-msg">Please enter the client's full name.</span>
+          </div>
+
+          <div class="field full">
+            <label for="capacity">Capacity<span class="req">*</span></label>
+            <select id="capacity" name="capacity" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Personal</option>
+              <option>Executor/administrator of an estate</option>
+              <option>Instructing via solicitor or third party</option>
+            </select>
+            <span class="error-msg">Please select a capacity.</span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" maxlength="254" required placeholder="name@example.com">
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+
+          <div class="field">
+            <label for="telephone">Telephone<span class="req">*</span></label>
+            <input type="tel" id="telephone" name="telephone" maxlength="20" required placeholder="+44 131 2345678">
+            <span class="error-msg">Please enter a telephone number.</span>
+          </div>
+
+          <div class="field full">
+            <label for="correspondence_address">Correspondence address<span class="req">*</span></label>
+            <textarea id="correspondence_address" name="correspondence_address" maxlength="500" rows="2" required placeholder="Address for letters and the report"></textarea>
+            <span class="error-msg">Please enter a correspondence address.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. The property -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <div>
+            <h2>The property</h2>
+            <p class="section-sub">What's being valued.</p>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="property_address">Property address (incl. postcode)<span class="req">*</span></label>
+            <textarea id="property_address" name="property_address" maxlength="500" rows="2" required placeholder="Full address including postcode"></textarea>
+            <span class="error-msg">Please enter the property address.</span>
+          </div>
+
+          <div class="field">
+            <label for="tenure">Tenure<span class="req">*</span></label>
+            <select id="tenure" name="tenure" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Freehold</option>
+              <option>Leasehold</option>
+              <option>Shared ownership lease</option>
+            </select>
+            <span class="error-msg">Please select the tenure.</span>
+          </div>
+
+          <div class="field">
+            <label for="property_type">Property type<span class="req">*</span></label>
+            <select id="property_type" name="property_type" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Detached</option>
+              <option>Semi-detached</option>
+              <option>Terraced</option>
+              <option>Flat/maisonette</option>
+              <option>Other</option>
+            </select>
+            <span class="error-msg">Please select a property type.</span>
+          </div>
+
+          <div class="field">
+            <label for="bedrooms">Number of bedrooms<span class="req">*</span></label>
+            <select id="bedrooms" name="bedrooms" required>
+              <option value="" disabled selected>Select…</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+            <span class="error-msg">Please select the number of bedrooms.</span>
+          </div>
+
+          <div class="field">
+            <label for="occupier_status">Occupier status<span class="req">*</span></label>
+            <select id="occupier_status" name="occupier_status" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Owner-occupied</option>
+              <option>Tenanted</option>
+              <option>Vacant</option>
+              <option>Unoccupied</option>
+            </select>
+            <span class="error-msg">Please select the occupier status.</span>
+          </div>
+        </div>
+
+        <!-- 2b conditional -->
+        <div class="subblock field-grid" id="leaseholdFields" data-conditional>
+          <div class="field">
+            <label for="lease_unexpired_years">Unexpired lease term (years)<span class="req">*</span></label>
+            <input type="text" id="lease_unexpired_years" name="lease_unexpired_years" maxlength="50" placeholder="e.g. 87">
+            <span class="error-msg">Please enter the unexpired lease term.</span>
+          </div>
+          <div class="field">
+            <label for="ground_rent">Ground rent (per annum)</label>
+            <input type="text" id="ground_rent" name="ground_rent" maxlength="50" placeholder="e.g. £150, or leave blank if unknown">
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Purpose -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <div>
+            <h2>Purpose of valuation</h2>
+            <p class="section-sub">This sets the basis of value and which figures we need from you.</p>
+          </div>
+        </div>
+
+        <div class="field full">
+          <div class="radio-group" id="purposeGroup" role="radiogroup" aria-required="true">
+            <label class="radio-option">
+              <input type="radio" name="purpose" value="Probate / Inheritance Tax" required>
+              <span class="opt-body"><span class="opt-label">Probate / Inheritance Tax</span></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="purpose" value="Matrimonial" required>
+              <span class="opt-body"><span class="opt-label">Matrimonial</span></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="purpose" value="Help to Buy redemption or staircasing" required>
+              <span class="opt-body"><span class="opt-label">Help to Buy</span></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="purpose" value="Shared ownership staircasing" required>
+              <span class="opt-body"><span class="opt-label">Shared ownership (staircasing or final)</span></span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="purpose" value="Other" required>
+              <span class="opt-body"><span class="opt-label">Other</span></span>
+            </label>
+          </div>
+          <span class="error-msg">Please select a purpose.</span>
+        </div>
+
+        <div class="field full" id="purposeOtherField" data-conditional style="margin-top:16px;">
+          <label for="purpose_other_detail">If Other — please describe<span class="req">*</span></label>
+          <textarea id="purpose_other_detail" name="purpose_other_detail" maxlength="1000" rows="2" placeholder="Tell us briefly what the valuation is for"></textarea>
+          <span class="error-msg">Please describe the purpose.</span>
+        </div>
+
+        <div class="banner banner-gate" id="gateOtherBanner">
+          <span class="banner-icon">⏸</span>
+          <span><strong>Held for review.</strong> An "Other" purpose can't be accepted automatically — West will review this before it's treated as an accepted instruction.</span>
+        </div>
+      </section>
+
+      <!-- 4. Purpose-specific -->
+      <section class="form-section" id="purposeSpecificSection" data-conditional>
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <div>
+            <h2>A few more details</h2>
+            <p class="section-sub" id="purposeSpecificSub">Details specific to your selected purpose.</p>
+          </div>
+        </div>
+
+        <!-- Probate -->
+        <div id="block-probate" data-conditional>
+          <div class="field">
+            <label for="date_of_death">Date of death<span class="req">*</span></label>
+            <input type="date" id="date_of_death" name="date_of_death">
+            <span class="field-hint">This fixes the valuation date.</span>
+            <span class="error-msg">Please enter the date of death.</span>
+          </div>
+        </div>
+
+        <!-- Matrimonial -->
+        <div id="block-matrimonial" data-conditional>
+          <div class="field">
+            <label for="matrimonial_valuation_date">Requested valuation date</label>
+            <input type="date" id="matrimonial_valuation_date" name="matrimonial_valuation_date">
+            <span class="field-hint">Optional — the correct date is confirmed when terms are issued.</span>
+          </div>
+        </div>
+
+        <!-- Help to Buy -->
+        <div id="block-htb" data-conditional>
+          <div class="field full" style="margin-bottom:20px;">
+            <label>Which equity loan scheme?<span class="req">*</span></label>
+            <div class="radio-group" id="htbSchemeGroup">
+              <label class="radio-option">
+                <input type="radio" name="htb_scheme" value="2013–2021">
+                <span class="opt-body"><span class="opt-label">2013–2021</span></span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="htb_scheme" value="2021–2023">
+                <span class="opt-body"><span class="opt-label">2021–2023</span></span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="htb_scheme" value="Not sure">
+                <span class="opt-body"><span class="opt-label">Not sure</span></span>
+              </label>
+            </div>
+            <span class="error-msg">Please select a scheme.</span>
+          </div>
+
+          <div class="banner banner-gate" id="gateHtbBanner">
+            <span class="banner-icon">⏸</span>
+            <span id="gateHtbText"><strong>We may not be able to act on this.</strong> This is being held for review before we can confirm.</span>
+          </div>
+
+          <div class="field full" style="margin-top:20px; margin-bottom:16px;">
+            <label>Known cladding or planning issues?<span class="req">*</span></label>
+            <div class="radio-group" id="claddingGroup">
+              <label class="radio-option">
+                <input type="radio" name="cladding_planning_issues" value="Yes">
+                <span class="opt-body"><span class="opt-label">Yes</span></span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="cladding_planning_issues" value="No">
+                <span class="opt-body"><span class="opt-label">No</span></span>
+              </label>
+            </div>
+            <span class="error-msg">Please answer this question.</span>
+          </div>
+
+          <div class="banner banner-note" id="claddingNote">
+            <span class="banner-icon">ⓘ</span>
+            <span>Noted. This may need our specialist route — we'll confirm before terms are issued.</span>
+          </div>
+        </div>
+
+        <!-- Shared ownership -->
+        <div id="block-so" data-conditional>
+          <div class="field-grid">
+            <div class="field">
+              <label for="so_percentage_owned">Current percentage owned<span class="req">*</span></label>
+              <input type="text" id="so_percentage_owned" name="so_percentage_owned" maxlength="50" placeholder="e.g. 40%">
+              <span class="error-msg">Please enter the current percentage owned.</span>
+            </div>
+            <div class="field">
+              <label for="so_housing_provider">Housing provider name<span class="req">*</span></label>
+              <input type="text" id="so_housing_provider" name="so_housing_provider" maxlength="150" placeholder="e.g. Clarion Housing">
+              <span class="error-msg">Please enter the housing provider's name.</span>
+            </div>
+          </div>
+
+          <div class="field full" style="margin-top:20px; margin-bottom:4px;">
+            <label>Improvements made by leaseholder?<span class="req">*</span></label>
+            <div class="radio-group" id="soImprovementsGroup">
+              <label class="radio-option">
+                <input type="radio" name="so_improvements" value="Yes">
+                <span class="opt-body"><span class="opt-label">Yes</span></span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="so_improvements" value="No">
+                <span class="opt-body"><span class="opt-label">No</span></span>
+              </label>
+            </div>
+            <span class="error-msg">Please answer this question.</span>
+          </div>
+
+          <div class="field full" id="soConsentField" data-conditional style="margin-top:16px;">
+            <label>If yes — with landlord's written consent?</label>
+            <div class="radio-group" id="soConsentGroup">
+              <label class="radio-option">
+                <input type="radio" name="so_landlord_consent" value="Yes">
+                <span class="opt-body"><span class="opt-label">Yes</span></span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="so_landlord_consent" value="No">
+                <span class="opt-body"><span class="opt-label">No</span></span>
+              </label>
+            </div>
+            <span class="field-hint">This drives which figures we need — with or without consent.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Admin -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <div>
+            <h2>Just one more thing</h2>
+            <p class="section-sub">Helps us understand how clients find us.</p>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="found_us">How did you find us?</label>
+          <select id="found_us" name="found_us">
+            <option value="" disabled selected>Select…</option>
+            <option>Comparison site</option>
+            <option>Referral</option>
+            <option>Returning client</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- 6. Acceptance -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">06</span>
+          <div>
+            <h2>Before you submit</h2>
+            <p class="section-sub">Please read and confirm both statements.</p>
+          </div>
+        </div>
+
+        <div class="check-option">
+          <input type="checkbox" id="accuracy_confirm" name="accuracy_confirm" required value="Confirmed">
+          <p><label for="accuracy_confirm" style="font-weight:400;">I confirm the information I have provided is accurate to the best of my knowledge.</label></p>
+        </div>
+        <div class="check-option">
+          <input type="checkbox" id="terms_accept" name="terms_accept" required value="Accepted">
+          <p><label for="terms_accept" style="font-weight:400;">I accept the description of service and standing terms provided with my fee proposal. I understand the quoted fee is an indicative budget which may be revised once the property and purpose are known, and that any revision will be agreed with me in writing before any inspection takes place.</label></p>
+        </div>
+      </section>
+
+    </div><!-- /.form-body -->
+
+    <div class="submit-area">
+      <div id="reviewSummary">
+        <strong>This enquiry will be held for review, not accepted automatically.</strong>
+        <ul id="reviewSummaryList"></ul>
+      </div>
+
+      <input type="hidden" name="review_status" id="reviewStatusInput" value="Clean">
+      <input type="hidden" name="_subject" id="emailSubjectInput" value="Valuation enquiry">
+      <input type="hidden" name="_next" value="https://westsideservices.co.uk/westside-forms/thank-you.html">
+      <label class="hp-field" for="hp_field" aria-hidden="true">Leave this field blank
+        <input type="text" id="hp_field" name="_gotcha" tabindex="-1" autocomplete="off">
+      </label>
+
+      <button type="submit" id="submitBtn">Submit request</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </div>
+
+  </form>
+
+  <footer>
+    ©<script>var dt = new Date();
+      document.write(dt.getFullYear())
+    </script> Westside Service Limited
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById('valuationForm');
+
+  // ---------- helpers ----------
+  function show(el){ el.classList.add('is-visible'); }
+  function hide(el){ el.classList.remove('is-visible'); }
+  function setRequired(el, isRequired){
+    if(!el) return;
+    if(isRequired){ el.setAttribute('required',''); }
+    else { el.removeAttribute('required'); }
+  }
+  function radiosByName(name){ return Array.from(form.querySelectorAll(`input[name="${name}"]`)); }
+  function checkedValue(name){
+    const r = form.querySelector(`input[name="${name}"]:checked`);
+    return r ? r.value : null;
+  }
+
+  // ---------- 2b: leasehold conditional ----------
+  const tenureSelect = document.getElementById('tenure');
+  const leaseholdFields = document.getElementById('leaseholdFields');
+  const leaseYears = document.getElementById('lease_unexpired_years');
+
+  function updateTenure(){
+    const val = tenureSelect.value;
+    const needsLease = (val === 'Leasehold' || val === 'Shared ownership lease');
+    if(needsLease){ show(leaseholdFields); setRequired(leaseYears, true); }
+    else { hide(leaseholdFields); setRequired(leaseYears, false); leaseYears.value=''; document.getElementById('ground_rent').value=''; }
+  }
+  tenureSelect.addEventListener('change', updateTenure);
+
+  // ---------- 3/4: purpose routing ----------
+  const purposeOtherField = document.getElementById('purposeOtherField');
+  const purposeOtherDetail = document.getElementById('purpose_other_detail');
+  const gateOtherBanner = document.getElementById('gateOtherBanner');
+  const purposeSpecificSection = document.getElementById('purposeSpecificSection');
+  const purposeSpecificSub = document.getElementById('purposeSpecificSub');
+
+  const blocks = {
+    probate: document.getElementById('block-probate'),
+    matrimonial: document.getElementById('block-matrimonial'),
+    htb: document.getElementById('block-htb'),
+    so: document.getElementById('block-so')
+  };
+
+  const dateOfDeath = document.getElementById('date_of_death');
+  const htbSchemeInputs = radiosByName('htb_scheme');
+  const claddingInputs = radiosByName('cladding_planning_issues');
+  const soPercent = document.getElementById('so_percentage_owned');
+  const soProvider = document.getElementById('so_housing_provider');
+  const soImprovementsInputs = radiosByName('so_improvements');
+
+  const subLabels = {
+    'Probate / Inheritance Tax': 'The date of death fixes the valuation date.',
+    'Matrimonial': 'A requested date is optional — we confirm the correct date when terms are issued.',
+    'Help to Buy redemption or staircasing': 'A couple of questions about the equity loan scheme.',
+    'Shared ownership staircasing': 'Ownership share and provider details.'
+  };
+
+  function hideAllPurposeBlocks(){
+    Object.values(blocks).forEach(hide);
+    setRequired(dateOfDeath, false);
+    htbSchemeInputs.forEach(i => setRequired(i,false));
+    claddingInputs.forEach(i => setRequired(i,false));
+    setRequired(soPercent,false);
+    setRequired(soProvider,false);
+    soImprovementsInputs.forEach(i => setRequired(i,false));
+  }
+
+  function updatePurpose(){
+    const val = checkedValue('purpose');
+
+    // Other -> gate 1
+    const isOther = (val === 'Other');
+    if(isOther){ show(purposeOtherField); setRequired(purposeOtherDetail,true); show(gateOtherBanner); }
+    else { hide(purposeOtherField); setRequired(purposeOtherDetail,false); hide(gateOtherBanner); purposeOtherDetail.value=''; }
+
+    hideAllPurposeBlocks();
+
+    if(!val || isOther){
+      hide(purposeSpecificSection);
+    } else {
+      show(purposeSpecificSection);
+      purposeSpecificSub.textContent = subLabels[val] || 'Details specific to your selected purpose.';
+
+      if(val === 'Probate / Inheritance Tax'){
+        show(blocks.probate);
+        setRequired(dateOfDeath,true);
+      } else if(val === 'Matrimonial'){
+        show(blocks.matrimonial);
+      } else if(val === 'Help to Buy redemption or staircasing'){
+        show(blocks.htb);
+        htbSchemeInputs.forEach(i => setRequired(i,true));
+        claddingInputs.forEach(i => setRequired(i,true));
+      } else if(val === 'Shared ownership staircasing'){
+        show(blocks.so);
+        setRequired(soPercent,true);
+        setRequired(soProvider,true);
+        soImprovementsInputs.forEach(i => setRequired(i,true));
+      }
+    }
+    updateGateSummary();
+  }
+
+  radiosByName('purpose').forEach(r => r.addEventListener('change', updatePurpose));
+
+  // ---------- Help to Buy: scheme gate + cladding note ----------
+  const gateHtbBanner = document.getElementById('gateHtbBanner');
+  const gateHtbText = document.getElementById('gateHtbText');
+  const claddingNote = document.getElementById('claddingNote');
+
+  function updateHtbScheme(){
+    const val = checkedValue('htb_scheme');
+    if(val === '2021–2023'){
+      gateHtbText.innerHTML = '<strong>We may not be able to act.</strong> This scheme year is being held for review before we can confirm.';
+      show(gateHtbBanner);
+    } else if(val === 'Not sure'){
+      gateHtbText.innerHTML = '<strong>Held for review.</strong> We\'ll need to confirm the scheme year before this can proceed.';
+      show(gateHtbBanner);
+    } else {
+      hide(gateHtbBanner);
+    }
+    updateGateSummary();
+  }
+  htbSchemeInputs.forEach(i => i.addEventListener('change', updateHtbScheme));
+
+  function updateCladding(){
+    const val = checkedValue('cladding_planning_issues');
+    if(val === 'Yes'){ show(claddingNote); } else { hide(claddingNote); }
+  }
+  claddingInputs.forEach(i => i.addEventListener('change', updateCladding));
+
+  // ---------- Shared ownership: consent conditional ----------
+  const soConsentField = document.getElementById('soConsentField');
+  function updateSoImprovements(){
+    const val = checkedValue('so_improvements');
+    if(val === 'Yes'){ show(soConsentField); }
+    else { hide(soConsentField); const c = form.querySelector('input[name="so_landlord_consent"]:checked'); if(c) c.checked=false; }
+  }
+  soImprovementsInputs.forEach(i => i.addEventListener('change', updateSoImprovements));
+
+  // ---------- Gate summary + submit button state ----------
+  const reviewSummary = document.getElementById('reviewSummary');
+  const reviewSummaryList = document.getElementById('reviewSummaryList');
+  const submitBtn = document.getElementById('submitBtn');
+  const reviewStatusInput = document.getElementById('reviewStatusInput');
+  const emailSubjectInput = document.getElementById('emailSubjectInput');
+
+  function updateGateSummary(){
+    const reasons = [];
+    if(checkedValue('purpose') === 'Other'){
+      reasons.push('Purpose given as "Other" — needs review before it\'s an accepted instruction.');
+    }
+    const htbVal = checkedValue('htb_scheme');
+    if(htbVal === '2021–2023'){
+      reasons.push('Help to Buy scheme year 2021–2023 — may not be workable, needs review.');
+    } else if(htbVal === 'Not sure'){
+      reasons.push('Help to Buy scheme year unconfirmed — needs review.');
+    }
+
+    if(reasons.length){
+      reviewSummaryList.innerHTML = reasons.map(r => `<li>${r}</li>`).join('');
+      show(reviewSummary);
+      submitBtn.textContent = 'Submit for review';
+      submitBtn.classList.add('hold-state');
+      reviewStatusInput.value = 'HOLD FOR REVIEW: ' + reasons.join(' | ');
+      emailSubjectInput.value = 'Valuation enquiry — HOLD FOR REVIEW';
+    } else {
+      hide(reviewSummary);
+      submitBtn.textContent = 'Submit request';
+      submitBtn.classList.remove('hold-state');
+      reviewStatusInput.value = 'Clean';
+      emailSubjectInput.value = 'Valuation enquiry';
+    }
+  }
+
+  // ---------- Validation ----------
+  function fieldWrapperOf(el){ return el.closest('.field'); }
+
+  function isVisible(el){
+    if(el.offsetParent === null && window.getComputedStyle(el).position !== 'fixed') return false;
+    return true;
+  }
+
+  function validateForm(){
+    let firstInvalid = null;
+    const requiredEls = Array.from(form.querySelectorAll('[required]'));
+
+    // group radios by name so we only validate once per group
+    const seenRadioGroups = new Set();
+
+    requiredEls.forEach(el => {
+      if(!isVisible(el)) return;
+
+      if(el.type === 'radio'){
+        if(seenRadioGroups.has(el.name)) return;
+        seenRadioGroups.add(el.name);
+        const group = radiosByName(el.name).filter(isVisible);
+        const anyChecked = group.some(r => r.checked);
+        const wrapper = group[0].closest('.field') || group[0].closest('.radio-group').parentElement;
+        if(!anyChecked){
+          wrapper.classList.add('invalid');
+          if(!firstInvalid) firstInvalid = group[0];
+        } else {
+          wrapper.classList.remove('invalid');
+        }
+        return;
+      }
+
+      const wrapper = fieldWrapperOf(el);
+      let valid = true;
+      if(el.type === 'checkbox'){ valid = el.checked; }
+      else { valid = el.value.trim() !== '' && el.checkValidity(); }
+
+      if(!valid){
+        if(wrapper) wrapper.classList.add('invalid');
+        if(!firstInvalid) firstInvalid = el;
+      } else {
+        if(wrapper) wrapper.classList.remove('invalid');
+      }
+    });
+
+    return firstInvalid;
+  }
+
+  // ---------- Submit ----------
+  const formStatus = document.getElementById('formStatus');
+
+  const THANK_YOU_URL = 'https://westsideservices.co.uk/westside-forms/thank-you.html';
+  const honeypot = document.getElementById('hp_field');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    // Honeypot: real users never see or fill this field. If it has a value,
+    // silently drop the submission instead of processing it.
+    if(honeypot && honeypot.value.trim() !== ''){
+      return;
+    }
+
+    const firstInvalid = validateForm();
+    if(firstInvalid){
+      firstInvalid.scrollIntoView({behavior:'smooth', block:'center'});
+      if(typeof firstInvalid.focus === 'function') firstInvalid.focus();
+      formStatus.textContent = 'Please check the highlighted fields.';
+      formStatus.classList.add('error');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if(response.ok){
+        formStatus.textContent = 'Thank you — redirecting…';
+        formStatus.classList.add('success');
+        window.location.href = THANK_YOU_URL;
+      } else {
+        formStatus.textContent = 'Something went wrong sending your enquiry. Please try again, or call us directly.';
+        formStatus.classList.add('error');
+      }
+    } catch (err){
+      formStatus.textContent = 'Something went wrong sending your enquiry. Please try again, or call us directly.';
+      formStatus.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+
+  // ---------- init ----------
+  updateTenure();
+  updatePurpose();
+})();
+</script>
+
+</body>
+</html>

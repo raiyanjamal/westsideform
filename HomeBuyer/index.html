@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://westsideservices.co.uk/assets/img/favicon.png">
+<title>Instructing your Survey — Westside Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="logo-wrap">
+    <div class="logo-mark">
+      <a href="https://westsideservices.co.uk">
+        <img src="https://westsideservices.co.uk/assets/img/brand-logo.png" alt="" width="180" height="auto">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="badges">
+    <span class="badge"><strong>CIOB</strong> Chartered Building Company</span>
+    <span class="badge"><span class="stars">★★★★★</span> Trustpilot</span>
+    <span class="badge"><strong>RICS</strong> Regulated</span>
+  </div>
+
+  <header class="form-header">
+    <h1>Instructing your Survey</h1>
+    <p class="intro">Tell us about you and the property you're buying, and we'll get your survey booked in.</p>
+  </header>
+
+  <form id="surveyForm" novalidate action="https://formspree.io/f/mppzqrjj" method="POST">
+
+    <div class="form-body">
+
+      <!-- 1. Your details -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <div>
+            <h2>Your details</h2>
+            <p class="section-sub">Who we'll be dealing with and how to reach you.</p>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="your_name">Your Name<span class="req">*</span></label>
+            <input type="text" id="your_name" name="Your_Name" maxlength="100" required placeholder="John Doe">
+            <span class="error-msg">Please enter your name.</span>
+          </div>
+
+          <div class="field full">
+            <label for="current_address">Your Current Address<span class="req">*</span></label>
+            <input type="text" id="current_address" name="Your_Address" maxlength="200" required placeholder="1234 Main St">
+            <span class="error-msg">Please enter your current address.</span>
+          </div>
+
+          <div class="field">
+            <label for="contact_number">Your Contact Number<span class="req">*</span></label>
+            <input type="tel" id="contact_number" name="Your_Contact_Number" maxlength="20" required placeholder="+44 131 2345678">
+            <span class="error-msg">Please enter a contact number.</span>
+          </div>
+
+          <div class="field">
+            <label for="your_email">Your Email<span class="req">*</span></label>
+            <input type="email" id="your_email" name="Your_Email" maxlength="254" required placeholder="name@example.com">
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. The property -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <div>
+            <h2>The property</h2>
+            <p class="section-sub">What you're purchasing and what we're surveying.</p>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="property_address">Address of the Property you are Purchasing<span class="req">*</span></label>
+            <input type="text" id="property_address" name="Address_Of_The_Property_You_Are_Purchasing" maxlength="200" required placeholder="1234 Main St">
+            <span class="error-msg">Please enter the property address.</span>
+          </div>
+
+          <div class="field">
+            <label for="purchase_price">Purchase price for the Property<span class="req">*</span></label>
+            <div class="price-group">
+              <span class="price-prefix">£</span>
+              <input type="number" id="purchase_price" name="Purchase_Price_For_The_Property" min="0" step="1" required placeholder="0">
+            </div>
+            <span class="error-msg">Please enter the purchase price.</span>
+          </div>
+
+          <div class="field">
+            <label for="property_age">Age of the property (if known)</label>
+            <input type="number" id="property_age" name="property_age" min="0" step="1" placeholder="In years">
+          </div>
+
+          <div class="field full">
+            <label for="tenure">Is the property Freehold or Leasehold?<span class="req">*</span></label>
+            <select id="tenure" name="Is_The_Property_Freehold_Or_Leasehold" required>
+              <option value="" disabled selected>Choose…</option>
+              <option>Freehold</option>
+              <option>Leasehold</option>
+            </select>
+            <span class="error-msg">Please select an option.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Estate agent -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <div>
+            <h2>Estate agent</h2>
+            <p class="section-sub">If you're buying through an agent, let us know who to liaise with. Optional.</p>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="agent_name">Estate Agent</label>
+            <input type="text" id="agent_name" name="Estate_Agent_Contact_Name" maxlength="150" placeholder="Agency name">
+          </div>
+
+          <div class="field">
+            <label for="agent_email">Estate Agent Email Address</label>
+            <input type="email" id="agent_email" name="Estate_Agent_Email_Address" maxlength="254" placeholder="agent@example.com">
+          </div>
+
+          <div class="field">
+            <label for="agent_phone">Estate Agent Phone Number</label>
+            <input type="tel" id="agent_phone" name="Estate_Agent_Phone_Number" maxlength="20" placeholder="+44 131 2345678">
+          </div>
+
+          <div class="field full">
+            <label for="agent_address">Estate Agent Address</label>
+            <input type="text" id="agent_address" name="Estate_Agent_Address" maxlength="200" placeholder="Branch address">
+          </div>
+
+          <div class="field full">
+            <label for="agent_contact_name">Estate Agent Contact Name</label>
+            <input type="text" id="agent_contact_name" name="agent_contact_name" maxlength="100" placeholder="Name of your agent contact">
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Survey requirements -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <div>
+            <h2>Survey requirements</h2>
+            <p class="section-sub">What level of survey, and anything specific we should look at.</p>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="survey_level">Level of Survey Required<span class="req">*</span></label>
+          <select id="survey_level" name="Level_Of_Survey_Required" required>
+            <option value="" disabled selected>Choose…</option>
+            <option>Level 1 — Condition Report</option>
+            <option>Level 2 — HomeBuyer Report</option>
+            <option>Level 3 — Building Survey</option>
+            <option>Not sure — please advise</option>
+          </select>
+          <span class="error-msg">Please select a survey level.</span>
+        </div>
+
+        <div class="field full" style="margin-top:18px;">
+          <label for="drone_required">Do you require any areas above 3m inspected with the use of a Drone?</label>
+          <select id="drone_required" name="Do_you_require_any_areas_above_3m_inspected_with_the_use_of_a_Drone?">
+            <option value="" disabled selected>Choose…</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div class="banner banner-note" id="droneNote">
+          <span class="banner-icon">ⓘ</span>
+          <span>Noted — we'll confirm drone access and any additional cost before the inspection date.</span>
+        </div>
+
+        <div class="field full" style="margin-top:18px;">
+          <label for="particular_concerns">Do you have any particular concerns that you would like the surveyor to investigate?</label>
+          <textarea id="particular_concerns" name="Text_Box_Concerns_For_Surveyor_To_Investigate" maxlength="2000" placeholder="Optional — let us know anything specific to look at"></textarea>
+        </div>
+
+        <div class="subblock field full">
+          <label for="found_us">How did you find us?</label>
+          <select id="found_us" name="How_Did_You_Find_Us_Other_Option">
+            <option value="" disabled selected>Choose…</option>
+            <option>Comparison site</option>
+            <option>Referral</option>
+            <option>Returning client</option>
+            <option>Estate agent</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- 5. Acceptance -->
+      <section class="form-section">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <div>
+            <h2>Before you submit</h2>
+            <p class="section-sub">Please confirm before we book anything in.</p>
+          </div>
+        </div>
+
+        <div class="check-option">
+          <input type="checkbox" id="terms_accept" name="terms_accept" required value="Accepted">
+          <p><label for="terms_accept" style="font-weight:400;">By submitting this form, you confirm that you accept our fee proposal, agree to the terms and conditions within it, and acknowledge the <a href="#" id="cancellationPolicyLink">Cancellation Policy</a>.</label></p>
+        </div>
+        <span class="error-msg" id="termsError" style="margin-top:10px;">Please confirm before submitting.</span>
+      </section>
+
+    </div><!-- /.form-body -->
+
+    <div class="submit-area">
+      <input type="hidden" name="_subject" value="HomeBuyer survey instruction">
+      <input type="hidden" name="_next" value="https://westsideservices.co.uk/westside-forms/thank-you.html">
+      <label class="hp-field" for="hp_field" aria-hidden="true">Leave this field blank
+        <input type="text" id="hp_field" name="_gotcha" tabindex="-1" autocomplete="off">
+      </label>
+      <button type="submit" id="submitBtn">Submit</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </div>
+
+  </form>
+
+  <footer>
+    ©<script>var dt = new Date();
+      document.write(dt.getFullYear())
+    </script> Westside Service Limited
+  </footer>
+
+  <div class="modal-overlay" id="cancellationModal" role="dialog" aria-modal="true" aria-labelledby="cancellationModalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="cancellationModalTitle">Cancellation Policy</h2>
+        <button type="button" class="modal-close" id="cancellationModalCloseX" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>We understand situations arise when you may need to cancel or reschedule your survey. To do so, we request you notify us at least 48 hours in advance. This allows us to offer your appointment slot to another client on our waiting list.</p>
+        <p>Cancellations or rescheduling requests made less than 48 hours before your survey may be subject to a cancellation fee of £150.</p>
+        <p>We appreciate your understanding and cooperation with this policy, as it helps us maintain efficient scheduling and service quality for all our clients. In case of emergencies or unforeseen circumstances, please contact us directly to discuss your situation.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancellationModalCloseBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById('surveyForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+  const termsError = document.getElementById('termsError');
+
+  const droneSelect = document.getElementById('drone_required');
+  const droneNote = document.getElementById('droneNote');
+  droneSelect.addEventListener('change', function(){
+    if(droneSelect.value === 'Yes'){ droneNote.classList.add('is-visible'); }
+    else { droneNote.classList.remove('is-visible'); }
+  });
+
+  // ---------- Cancellation Policy modal ----------
+  const policyLink = document.getElementById('cancellationPolicyLink');
+  const cancellationModal = document.getElementById('cancellationModal');
+  const modalCloseX = document.getElementById('cancellationModalCloseX');
+  const modalCloseBtn = document.getElementById('cancellationModalCloseBtn');
+  let lastFocusedEl = null;
+
+  function openModal(){
+    lastFocusedEl = document.activeElement;
+    cancellationModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    modalCloseX.focus();
+    document.addEventListener('keydown', onModalKeydown);
+  }
+
+  function closeModal(){
+    cancellationModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onModalKeydown);
+    if(lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
+  }
+
+  function onModalKeydown(e){
+    if(e.key === 'Escape'){ closeModal(); }
+  }
+
+  policyLink.addEventListener('click', function(e){
+    e.preventDefault();
+    openModal();
+  });
+  modalCloseX.addEventListener('click', closeModal);
+  modalCloseBtn.addEventListener('click', closeModal);
+  cancellationModal.addEventListener('click', function(e){
+    if(e.target === cancellationModal){ closeModal(); }
+  });
+
+  function fieldWrapperOf(el){ return el.closest('.field'); }
+
+  function validateForm(){
+    let firstInvalid = null;
+    const requiredEls = Array.from(form.querySelectorAll('[required]'));
+
+    requiredEls.forEach(el => {
+      if(el.type === 'checkbox'){
+        if(!el.checked){
+          termsError.style.display = 'block';
+          if(!firstInvalid) firstInvalid = el;
+        } else {
+          termsError.style.display = 'none';
+        }
+        return;
+      }
+
+      const wrapper = fieldWrapperOf(el);
+      const valid = el.value.trim() !== '' && el.checkValidity();
+      if(!valid){
+        if(wrapper) wrapper.classList.add('invalid');
+        if(!firstInvalid) firstInvalid = el;
+      } else {
+        if(wrapper) wrapper.classList.remove('invalid');
+      }
+    });
+
+    return firstInvalid;
+  }
+
+  const THANK_YOU_URL = 'https://westsideservices.co.uk/westside-forms/thank-you.html';
+  const honeypot = document.getElementById('hp_field');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    // Honeypot: real users never see or fill this field. If it has a value,
+    // silently drop the submission instead of processing it.
+    if(honeypot && honeypot.value.trim() !== ''){
+      return;
+    }
+
+    const firstInvalid = validateForm();
+    if(firstInvalid){
+      firstInvalid.scrollIntoView({behavior:'smooth', block:'center'});
+      if(typeof firstInvalid.focus === 'function') firstInvalid.focus();
+      formStatus.textContent = 'Please check the highlighted fields.';
+      formStatus.classList.add('error');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if(response.ok){
+        formStatus.textContent = 'Thank you — redirecting…';
+        formStatus.classList.add('success');
+        window.location.href = THANK_YOU_URL;
+      } else {
+        formStatus.textContent = 'Something went wrong sending your form. Please try again, or call us directly.';
+        formStatus.classList.add('error');
+      }
+    } catch (err){
+      formStatus.textContent = 'Something went wrong sending your form. Please try again, or call us directly.';
+      formStatus.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
